@@ -9,9 +9,9 @@ PyTorch 1.1.0 or higher, Python 3.6 / 3.7
 Download the Cornell Movie Dialog Corpus from [here](http://www.cs.cornell.edu/~cristian/data/cornell_movie_dialogs_corpus.zip) and unzip the file to your directory
 
 ## Files
-`preprocess.py:` Dataset Preproceesing
-`utils.py:` Utilities 
-`models.py:` Transformer Models
-`train.py:` Training Script
+`preprocess.py:` Dataset Preproceesing <br/>
+`utils.py:` Utilities  <br/>
+`models.py:` Transformer Models <br/>
+`train.py:` Training Script <br/>
 `chat.py:` Evaluation/Chatting Script
 
