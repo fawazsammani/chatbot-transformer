@@ -6,7 +6,7 @@ from models import *
 from utils import *
 
 load_checkpoint = True
-ckpt_path = 'checkpoint.tar'
+ckpt_path = 'checkpoint.pth.tar'
 
 
 def evaluate(transformer, question, question_mask, max_len, word_map):
