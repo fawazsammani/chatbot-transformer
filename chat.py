@@ -5,6 +5,8 @@ import torch.utils.data
 from models import *
 from utils import *
 
+load_checkpoint = True
+ckpt_path = 'checkpoint.tar'
 
 
 def evaluate(transformer, question, question_mask, max_len, word_map):
@@ -40,8 +42,9 @@ def evaluate(transformer, question, question_mask, max_len, word_map):
     return sentence
 
 
-checkpoint = torch.load('checkpoint.pth.tar')
-transformer = checkpoint['transformer']
+if load_checkpoint:
+    checkpoint = torch.load(ckpt_path)
+    transformer = checkpoint['transformer']
 
 
 while(1):
