@@ -24,7 +24,7 @@ transformer = Transformer(d_model = d_model, heads = heads, num_layers = num_lay
 transformer = transformer.to(device)
 adam_optimizer = torch.optim.Adam(transformer.parameters(), lr=0, betas=(0.9, 0.98), eps=1e-9)
 transformer_optimizer = AdamWarmup(model_size = d_model, warmup_steps = 4000, optimizer = adam_optimizer)
-criterion = LossWithLS(transformer.d_model, 0.1)
+criterion = LossWithLS(len(word_map), 0.1)
 
 
 
