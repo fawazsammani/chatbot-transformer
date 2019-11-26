@@ -20,9 +20,9 @@ def evaluate(transformer, question, question_mask, max_len, word_map):
     words = torch.LongTensor([[start_token]]).to(device)
     
     for step in range(max_len - 1):
-        size = words.shape[0]
+        size = words.shape[1]
         target_mask = torch.triu(torch.ones(size, size)).transpose(0, 1).type(dtype=torch.uint8)
-        target_mask = target_mask.to(device).unsqueeze(0)
+        target_mask = target_mask.to(device).unsqueeze(0).unsqueeze(0)
         decoded = transformer.decode(words, target_mask, encoded, question_mask)
         predictions = transformer.logit(decoded[:, -1])
         _, next_word = torch.max(predictions, dim = 1)
