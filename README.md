@@ -1,4 +1,4 @@
-# PyTorch Implementation of a Chatbot using Transformers
+# PyTorch Implementation of a Chatbot using Transformers and Universal Transformers
 
 This is an experiment on using Transformers to build a Chatbot (Question-Answer System). The code is heavily commented and is more like a tutorial. 
 
